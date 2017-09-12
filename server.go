@@ -6,11 +6,12 @@ import (
 	"runtime"
 )
 
-func indexHandler(w http.ResponseWriter, r *http.Request) {
+func index(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello world, I'm running on %s with an %s CPU ", runtime.GOOS, runtime.GOARCH)
 } 
 
 func main() {
-	http.HandleFunc("/", indexHandler)
+	http.HandleFunc("/", index)
+	fmt.Println("Listening on localhost:8080...")
 	http.ListenAndServe(":8080", nil)
 }
