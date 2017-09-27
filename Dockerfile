@@ -1,9 +1,9 @@
 FROM golang
 
-ADD . /go/src/github.com/samanthakem/go-k8s-gke/server
+ADD . /go/src/github.com/samanthakem/hello-go/hello
 
-RUN go install github.com/samanthakem/go-k8s-gke/server
+RUN go install github.com/samanthakem/hello-go/hello
 
-ENTRYPOINT /go/bin/server
+ENTRYPOINT /go/bin/hello
 
 EXPOSE 8080
