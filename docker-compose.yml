@@ -5,4 +5,4 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - .:/go/src/github.com/samanthakem/go-k8s-gke/server
+      - .:/go/src/github.com/samanthakem/hello-go/hello
